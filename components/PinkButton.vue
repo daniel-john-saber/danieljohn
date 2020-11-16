@@ -1,6 +1,6 @@
 <template>
   <a class="button is-large is-white is-pinkbut is-rounded" :href="link">
-    <span class="icon is-small" style="height: 2.2x; width: 2.2px; padding: 20px;">
+    <span class="icon is-small" style="height: 2.2x; width: 2.2px; margin-left: -13px; padding: 20px;">
       <svg class="icon" aria-hidden="true">
       <use :xlink:href="icon"></use>
       </svg>
@@ -38,7 +38,7 @@ export default {
   .is-pinkbut { 
     position: relative;
     margin: auto;
-    padding: 19px 22px;
+    padding: 10px 22px;
     // padding-left: 30px;
     transition: all .2s ease;
     &:before { 
