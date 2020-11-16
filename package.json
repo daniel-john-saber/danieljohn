@@ -1,0 +1,38 @@
+{
+  "name": "danieljohn",
+  "version": "1.0.0",
+  "description": "My cool Nuxt.js project",
+  "author": "Daniel John",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/bulma": "^1.2.1",
+    "ant-design-vue": "^1.7.2",
+    "biz-icon": "^0.1.1",
+    "buefy": "^0.8.20",
+    "exif-js": "^2.3.0",
+    "markdown-it": "^12.0.2",
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.31",
+    "nuxt-fontawesome": "^0.4.0",
+    "three": "^0.118.1",
+    "vue-vanta": "0.0.1",
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "sass-loader": "^8.0.2",
+    "vue-style-loader": "^4.1.2"
+  }
+}
