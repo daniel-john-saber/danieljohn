@@ -15,21 +15,24 @@ export default {
       { rel: 'icon', href: '/favicon.ico' }
     ],
     script: [
-      { type: "text/javascript", id:"hs-script-loader", src:"//js.hs-scripts.com/8829228.js" }
+      { type: "text/javascript", id:"hs-script-loader", src:"//js.hs-scripts.com/8829228.js" },
     ],
+
   },
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
+  server: {     
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },   // other configs 
   /*
   ** Global CSS
   */
   css: [
   ],
-  googleAnalytics: {
-    id: 'G-QKG0B0RH4K'
-  },
+  target: 'static',
   /*
   ** Plugins to load before mounting the App
   */
@@ -39,16 +42,17 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    '@nuxtjs/google-analytics'
-  ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
-
+    '@nuxtjs/gtm',
+    [
+      '@nuxtjs/device',
+      // {defaultUserAgent: 'Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.39 Mobile Safari/537.36'}
+    ],
     'nuxt-buefy',
     [
       'nuxt-fontawesome', {
@@ -65,6 +69,9 @@ export default {
       }
     ]
   ],
+  gtm: {
+    id: 'GTM-MTPD369'
+  },
   /*
   ** Axios module configuration
   */

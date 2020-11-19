@@ -1,6 +1,6 @@
 <template>    
   <div>
-    <div v-if="!isMobile()" class="carotainer is-interest-container cont-float">
+    <div v-if="!$device.isDesktop" class="carotainer is-interest-container cont-float">
       <figure class="image is-160x160" style="z-index:1;">
         <img src="~/assets/interests/ducks.png">
       </figure>
@@ -149,9 +149,9 @@ export default {
   margin-right: 50px
 }
 
-.carotainer:not(:first-child) {
-    margin-left: 70px;
-}
+// .carotainer:not(:first-child) {
+//     margin-left: 0px;
+// }
 
 .carotainer:hover {
   transform: translateY(-20px);
@@ -164,7 +164,7 @@ export default {
 }
 .carotainer:hover ~.card {
   position: relative;
-  left: 500px;
+  left: 500em;
   transition: 0.4s ease-out;
 }
 

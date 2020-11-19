@@ -8,12 +8,15 @@
               <div itemscope itemtype="http://schema.org/Person">
                 <img id="profile-pic" src="~/assets/me.png" width="250" height="160" itemprop="image">
                 <h1 class="title title--kukuri" itemprop="name">Daniel John</h1>
-                <div v-if="!isMobile()">
-                   <no-ssr>
-                    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>
+                
+                <div v-if="$device.isMobile">
+                   <no-ssr v-if="$device.isMobile">
+                    <div v-if="$device.isMobile" class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>
                    </no-ssr>
                 </div>
-                <div v-if="isMobile()">
+                <div v-else>
+                   <div><span id='text'></span><div></div></div>
+
                 </div>
               </div>
               <br>
@@ -146,21 +149,16 @@ export default {
       { src: 'vanta/vanta.clouds.min.js' },
     ]
   },
-  data() {
-      return {
-          isActive: false
-      }
-  },
   methods: {
-    isMobile() {
-      if (process.browser) {
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-          return true
-        } else {
-          return false
-        }
-      }
-    }
+    // isMobile() {
+    //   if (process.browser) {
+    //     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //       return true
+    //     } else {
+    //       return false
+    //     }
+    //   }
+    // }
   },
   async mounted() {
     // window is only avaiable on browser
@@ -208,7 +206,7 @@ export default {
     padding-bottom: 5px;
   }
 
-  .title--kukuri {
+  .title--kukuri, .title--kukuri-mobile {
     text-transform: uppercase;
     font-weight: 800;
     overflow: hidden;
@@ -216,17 +214,33 @@ export default {
     color: #b2b0a9;
   }
 
-  .title--kukuri:hover {
+  .title--kukuri:hover, .title--kukuri-mobile:hover {
     color: #122f4e;
   }
   .title--kukuri::after {
+    display: absolute;
+    content: '';
+    position: absolute;
+    height: 21px;
+    width: 7.47em;
+    top: 50.5%;
+    margin-top: 95.5px;
+    margin-left: auto;
+    background: #f6907e;
+    transform: translate3d(-100%,0,0);
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    opacity: 0.5;
+
+  }
+    .title--kukuri-mobile::after {
     content: '';
     position: absolute;
     height: 21px;
     width: 495px;
     top: 50.5%;
     margin-top: 95.5px;
-    margin-left: -2.5px;
+    margin-left: 0px;
     background: #f6907e;
     transform: translate3d(-100%,0,0);
     transition: transform 0.4s;
@@ -272,7 +286,7 @@ export default {
 }
 .console-container {
  
-  font-family:Khula;
+  /* font-family:Khula;
   font-size:4em;
   text-align:center;
   height:200px;
@@ -283,12 +297,12 @@ export default {
   top:0;
   bottom:0;
   left:0;
-  right:0;
+  right:0; */
 }
 .console-underscore {
-  display:'float';
-  top:-0.14em;
-  left:-100px;
+  /* display:'float';
+  top:-0.14em; */
+  /* left:-100px; */
 }
 .line{
   margin: 0 auto;
