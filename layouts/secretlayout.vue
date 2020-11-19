@@ -73,7 +73,7 @@ export default {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 800.00,
+      minHeight: 1600.00,
       minWidth: 400.00,
       scale: 1.00,
       scaleMobile: 1.00,
