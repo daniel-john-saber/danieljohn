@@ -39,7 +39,7 @@
             </section>
             <section class="hero is-full">
               <div class="hero-body">
-                <a class="text is-font twitter-share-button" href="https://twitter.com/intent/tweet?url=http://localhost:54083/writing/canwelearnfromai">What did you think of this article? I'd love your feedback!</a> 
+                <a class="text is-font twitter-share-button" href="https://twitter.com/intent/tweet?url=http://danieljohn.me/writing/canwelearnfromai">What did you think of this article? I'd love your feedback!</a> 
                   <!-- <pink-button
                       link="https://twitter.com/danieljohn___"
                       icon="#icon-14"

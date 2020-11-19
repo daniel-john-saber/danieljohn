@@ -1,20 +1,40 @@
 <template>    
-  <div class="carotainer is-interest-container cont-float">
-    <figure class="image is-160x160" style="z-index:1;">
-      <img src="~/assets/interests/ducks.png">
-    </figure>
-    <div class="is-text-interest-position" style="z-index:1;">
-      <a class="text_interest">{{ title }}</a> 
+  <div>
+    <div v-if="!isMobile()" class="carotainer is-interest-container cont-float">
+      <figure class="image is-160x160" style="z-index:1;">
+        <img src="~/assets/interests/ducks.png">
+      </figure>
+      <div class="is-text-interest-position" style="z-index:1;">
+        <a class="text_interest">{{ title }}</a> 
+      </div>
+      <div class="multi-button">
+        <!-- <div class=""> -->
+          <svg class="icon funbutton" aria-hidden="true">
+            <use xlink:href="#icon-spotify"></use>
+          </svg>
+          <svg class="icon funbutton" aria-hidden="true">
+            <use xlink::href="icon"></use>
+          </svg>
+        <!-- </div> -->
+      </div>
     </div>
-    <div class="multi-button">
-      <!-- <div class=""> -->
-        <svg class="icon funbutton" aria-hidden="true">
-          <use xlink:href="#icon-spotify"></use>
-        </svg>
-        <svg class="icon funbutton" aria-hidden="true">
-          <use xlink::href="icon"></use>
-        </svg>
-      <!-- </div> -->
+    <div v-else class="carotainer-mobile is-interest-container cont-float">
+      <figure class="image is-160x160" style="z-index:1;">
+        <img src="~/assets/interests/ducks.png">
+      </figure>
+      <div class="is-text-interest-position" style="z-index:1;">
+        <a class="text_interest">{{ title }}</a> 
+      </div>
+      <div class="multi-button">
+        <!-- <div class=""> -->
+          <svg class="icon funbutton" aria-hidden="true">
+            <use xlink:href="#icon-spotify"></use>
+          </svg>
+          <svg class="icon funbutton" aria-hidden="true">
+            <use xlink::href="icon"></use>
+          </svg>
+        <!-- </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -23,7 +43,7 @@
 <script>
 import { Icon } from 'ant-design-vue'
 const MyIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2197972_is1hveuufj7.js', 
+  scriptUrl: '//at.alicdn.com/t/font_2197972_6hkz6cbpgbd.js', 
 })
 export default {
   props: {
@@ -39,7 +59,18 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
+  methods: {
+    isMobile() {
+      if (process.browser) {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
+  },
 }
 </script>
 
@@ -85,6 +116,7 @@ export default {
     box-shadow: 0 0 90px 10px rgba(255, 255, 255, 0.15);
   }
 }
+
 .is-h {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -103,7 +135,7 @@ export default {
   width: 100%;
   height: auto;
 }
-.carotainer {
+.carotainer .carotainer-mobile{
   display: flex;
   height: auto;
   width: 200px;
@@ -118,11 +150,11 @@ export default {
     margin-left: 70px;
 }
 
-.carotainer:hover {
+.carotainer:hover .carotainer-mobile:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
 }
-.carotainer:hover .filledbar {
+.carotainer:hover .carotainer-mobile:hover {
   transform: translateX(20px);
   width: 120px;
   transition: 0.4s ease-out;

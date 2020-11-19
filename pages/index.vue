@@ -8,17 +8,19 @@
               <div itemscope itemtype="http://schema.org/Person">
                 <img id="profile-pic" src="~/assets/me.png" width="250" height="160" itemprop="image">
                 <h1 class="title title--kukuri" itemprop="name">Daniel John</h1>
-                <div>
+                <div v-if="!isMobile()">
                    <no-ssr>
                     <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>
                    </no-ssr>
+                </div>
+                <div v-else>
                 </div>
               </div>
               <br>
               <p class="has-text-centered is-remove-top-margin is-lower" style="margin-left: 18px">
                 <pink-button
                   title="Writing"
-                  link="/writing"
+                  link="/writing/canwelearnfromai"
                   icon="#icon-pen"
                   tab=false
                 />
@@ -143,6 +145,22 @@ export default {
       { src: 'vanta/three.min.js' },
       { src: 'vanta/vanta.clouds.min.js' },
     ]
+  },
+  data() {
+      return {
+          isActive: false
+      }
+  },
+  methods: {
+    isMobile() {
+      if (process.browser) {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
   },
   async mounted() {
     // window is only avaiable on browser
