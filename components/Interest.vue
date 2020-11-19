@@ -18,7 +18,7 @@
         <!-- </div> -->
       </div>
     </div>
-    <div v-else class="carotainer-mobile is-interest-container cont-float">
+    <!-- <div v-else class=" carotainer-mobile is-interest-container cont-float">
       <figure class="image is-160x160" style="z-index:1;">
         <img src="~/assets/interests/ducks.png">
       </figure>
@@ -26,16 +26,14 @@
         <a class="text_interest">{{ title }}</a> 
       </div>
       <div class="multi-button">
-        <!-- <div class=""> -->
           <svg class="icon funbutton" aria-hidden="true">
             <use xlink:href="#icon-spotify"></use>
           </svg>
           <svg class="icon funbutton" aria-hidden="true">
             <use xlink::href="icon"></use>
           </svg>
-        <!-- </div> -->
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
                
@@ -140,7 +138,7 @@ export default {
   width: 100%;
   height: auto;
 }
-.carotainer .carotainer-mobile{
+.carotainer {
   display: flex;
   height: auto;
   width: 200px;
@@ -155,11 +153,11 @@ export default {
     margin-left: 70px;
 }
 
-.carotainer:hover .carotainer-mobile:hover {
+.carotainer:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
 }
-.carotainer:hover .carotainer-mobile:hover {
+.carotainer:hover {
   transform: translateX(20px);
   width: 120px;
   transition: 0.4s ease-out;

@@ -13,7 +13,7 @@
                     <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>
                    </no-ssr>
                 </div>
-                <div v-else>
+                <div v-if="isMobile()">
                 </div>
               </div>
               <br>
@@ -48,7 +48,7 @@
     </div> -->
     <section>
       <div>
-        <div class="columns is-vcentered">
+        <div class="columns is-vcentered is-mobile">
           <div class="column is-9 is-centered content-block-wrap" style="margin-left: auto; margin-right: auto;">
             <div class="box content-block  is-one-half is-transparent" style="box-shadow:  39px 39px 83px #52b3ec, 
               -39px -39px 83px #58bffa;">
