@@ -27,6 +27,9 @@ export default {
   */
   css: [
   ],
+  googleAnalytics: {
+    id: 'G-QKG0B0RH4K'
+  },
   /*
   ** Plugins to load before mounting the App
   */
@@ -37,6 +40,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
