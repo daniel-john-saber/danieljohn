@@ -26,7 +26,7 @@
                 />
                 <pink-button
                   title="Projects"
-                  link="/secret"
+                  link="/projects/secret"
                   icon="#icon-laptop"
                   tab=false
                 />
