@@ -69,7 +69,12 @@ export default {
           return false
         }
       }
-    }
+    },
+    data() {
+      return {
+          isActive: false
+      }
+  },
   },
 }
 </script>
