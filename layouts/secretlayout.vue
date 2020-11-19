@@ -27,7 +27,7 @@
               <div class="navbar-end" style="margin-top: 3px">
                 <a class="navbar-item is-tab is-nav-text" href="/">Home</a>
                 <a class="navbar-item is-tab is-nav-text" href="/writing/canwelearnfromai">Writing</a>
-                <a class="navbar-item is-tab is-nav-text" @click="isActive = !isActive" :disabled="isActive">Projects</a>
+                <a class="navbar-item is-tab is-nav-text" href="/projects">Projects</a>
                 <a class="navbar-item is-tab is-nav-text" href="/about">About</a>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 1200.00,
+      minHeight: 2200.00,
       minWidth: 400.00,
       scale: 1.00,
       scaleMobile: 1.00,

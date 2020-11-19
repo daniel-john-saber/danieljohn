@@ -2,7 +2,9 @@
   <a class="button is-large is-white is-pinkbut is-rounded" :href="link">
     <span class="icon is-small" style="height: 2.2x; width: 2.2px; margin-left: -13px; padding: 20px;">
       <svg class="icon" aria-hidden="true">
-      <use :xlink:href="icon"></use>
+        <use :xlink:href="icon" :v-if="tab == true" target="_blank"></use>
+        <use :xlink:href="icon" :v-if="tab == false"></use>
+
       </svg>
 
     </span>
@@ -14,7 +16,7 @@
 <script>
 import { Icon } from 'ant-design-vue'
 const MyIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2197972_z2yuo9cqmx.js', 
+  scriptUrl: '//at.alicdn.com/t/font_2197972_is1hveuufj7.js', 
 })
 export default {
   props: {
@@ -29,7 +31,13 @@ export default {
     icon: {
       // type: String,
       required: true
+    },
+    tab: {
+      required: false
     }
+  },
+  computed: {
+
   }
 }
 </script>

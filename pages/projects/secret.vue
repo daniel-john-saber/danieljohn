@@ -44,7 +44,7 @@ import * as THREE from "three";
 import PinkButton from '~/components/PinkButton'
 import { Icon } from 'ant-design-vue'
 const MyIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2197972_2s0bhj6h68g.js', 
+  scriptUrl: '//at.alicdn.com/t/font_2197972_is1hveuufj7.js', 
 })
 export default {
   layout: 'secretlayout',

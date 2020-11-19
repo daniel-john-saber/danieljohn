@@ -15,8 +15,8 @@
 <template>
     <section class="hero is-small is-default has-background-light-grey">
       <div class="hero-body">
-        <div id="info-container is-one-half" class="container has-text-centered">
-            <div class="row columns">
+        <div id="is-one-half" class="container has-text-centered">
+            <div class="columns is-8">
                 <div class="column">
                     <div class="card is-4by3">
                         <div class="card-image is-small">

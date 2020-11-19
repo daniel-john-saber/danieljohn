@@ -2,7 +2,7 @@
   <div>
     <section class="hero is-medium is-default has-background-light-grey">
       <div class="is-transparent hero-body" >
-        <div id="info-container is-one-half" class="container has-text-centered">
+        <div id=" is-one-half" class="container has-text-centered">
           <div class="columns is-vcentered">
             <div class="column is-one-half is-centered has-nice-link">
               <div itemscope itemtype="http://schema.org/Person">
@@ -20,16 +20,19 @@
                   title="Writing"
                   link="/writing"
                   icon="#icon-pen"
+                  tab=false
                 />
                 <pink-button
                   title="Projects"
                   link="/secret"
                   icon="#icon-laptop"
+                  tab=false
                 />
                 <pink-button
                   title="Twitter"
                   link="https://twitter.com/danieljohn___"
                   icon="#icon-14"
+                  tab=true
                 />
               </p>
               <br>
@@ -38,13 +41,15 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <!-- <div class="container">
           <div class="line"></div>
-    </div>
-    <section class="section">
-      <div class="columns is-vcentered">
-        <div class="column is-9 is-centered content-block-wrap" style="margin-left: auto; margin-right: auto;">
-            <div class="box content-block info-container is-one-half is-transparent">
+    </div> -->
+    <section>
+      <div>
+        <div class="columns is-vcentered">
+          <div class="column is-9 is-centered content-block-wrap" style="margin-left: auto; margin-right: auto;">
+            <div class="box content-block  is-one-half is-transparent" style="box-shadow:  39px 39px 83px #52b3ec, 
+              -39px -39px 83px #58bffa;">
               <div class="vert-line"/>
               <h class="text-is-left is-h" >
               intro
@@ -53,43 +58,110 @@
                 Hi 👋 I'm <strong>Daniel</strong>. I'm a data scientist by day, full-stack developer by night. I'm working on creating a new generation of web applications that allow our data to work for us. More on that coming soon 🎉 
               </h2>
             </div>
-            <div class="box content-block info-container is-one-half is-transparent">
+            <div class="box content-block  is-one-half is-transparent">
               <h class="text-is-left is-h" >
               writing
               </h>
               <h2 class="text-is-left" >
               I've just started out writing. I try to combine topics from data science, technology, and life with influences from my various curiosities. Check out my first blog and let me know what you think!
               </h2>
-            
-
               <blog-horizontal/>
+            </div>
+            <div class="box content-block  is-one-half is-transparent">
+              <h class="text-is-left is-h" style="margin-bottom: 35px;">
+              what i'm listening to
+              </h>
+              <music/>
+            </div>
+            <div class="box content-block  is-one-half is-transparent">
+              <h class="text-is-left is-h" style="margin-bottom: 35px;">
+              what i'm watching
+              </h>
+              <shows/>
+            </div>
+            <div class="box content-block  is-one-half is-transparent">
+              <h class="text-is-left is-h" style="margin-bottom: 35px;">
+              what i'm reading
+              </h>
+              <books
+              />
+            </div>
+            <div class="box content-block  is-one-half is-transparent">
+              <h class="text-is-left is-h" style="margin-bottom: 35px;">
+              other interests
+              </h>
+              <interests
+              />
+            </div>
           </div>
         </div>
-      </div> 
-   
-      
+        
+
+          <!-- <div class="box content-block  is-one-half is-transparent">
+              <h class="text-is-left is-h" >
+              what i'm listening to
+              </h>
+
+              <interest 
+                image="~/assets/interests/pluto.png"
+                title="Pluto x Baby Pluto"
+                icon="icon-spotify"
+              />
+          </div> -->
+        </div>
     </section>
-  </div>
-  
+  </div>  
 </template>
 <script>
 import Card from '~/components/Card'
 import PinkButton from '~/components/PinkButton'
 import BlogHorizontal from '~/components/BlogHorizontal'
+import Interest from '~/components/Interest'
+import Music from '~/components/interests/Music'
+import Shows from '~/components/interests/Shows'
+import Books from '~/components/interests/Books'
+import Interests from '~/components/interests/other'
+
 import { Icon } from 'ant-design-vue'
 const MyIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2197972_2s0bhj6h68g.js', 
+  scriptUrl: '//at.alicdn.com/t/font_2197972_is1hveuufj7.js', 
 })
 export default {
    name: 'HomePage',
    components: {
      Card,
      BlogHorizontal,
-     PinkButton
+     PinkButton,
+     Interest,
+     Music,
+     Shows,
+     Books,
+     Interests
    },
-   methods: { 
-    
-   },
+   head: {
+    script: [
+      { src: 'vanta/three.min.js' },
+      { src: 'vanta/vanta.clouds.min.js' },
+    ]
+  },
+  async mounted() {
+    // window is only avaiable on browser
+    if (process.browser) {
+      window.THREE = THREE;
+      const { default: CLOUDS } = await import("@/static/vanta/vanta.clouds.min.js");
+      VANTA.CLOUDS({
+        el: "#section-background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 2200.00,
+        minWidth: 800.00,
+        cloudColor: 0xa4a4c0,
+        sunColor: 0x98653f,
+        speed: 0.10
+      })
+    }
+  },
 };
 </script>
 <style>

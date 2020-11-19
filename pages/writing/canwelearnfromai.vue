@@ -10,10 +10,10 @@
 
                 <div class="container" style="margin-top:80px">
                   <h1 class="title is-1 ">
-                    Learning From AI
+                    Learning From Machines
                   </h1>
                   <h2 class="subtitle" style="width: 900px">
-                    Perspectives on technological accelerators 
+                    Perspectives on AI and other technological accelerators 
                   </h2>
                 </div>
               </div>

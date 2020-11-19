@@ -1,60 +1,69 @@
 <template>
-  <div @mouseover="hover = true" @mouseleave="hover = false" class="container write-block is-small">
-    
-    <article class="media">
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <svg class="iconi" aria-hidden="true">
-            <use xlink:href="#icon-ALGORITHM"></use>
-          </svg>
-        </p>
-      </figure>
-      <my-icon/>
-      <div class="media-content">
-        <div class="content is-top" style="margin-top: -8px;"> 
-            <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-10px;">
-            Learning From AI</a> 
-            <svg class="icon is-small" aria-hidden="true">
-              <use xlink:href="#icon-calender"></use>
-            </svg>
-            <small style="margin-top: -80px">11/14/2020&nbsp;&nbsp;&nbsp;&nbsp;</small>
-            <p class="is-subtitle">
-            Perspectives on technological accelerators
+<div clas="columns is-mobile is-multiline'">
+    <div class="column" style="overflow: auto;">
+      <div @mouseover="hover = true" @mouseleave="hover = false" class="container write-block is-small">
+        
+        <article class="media">
+          <figure class="media-left" style="margin-top: auto;">
+            <p class="image is-64x64">
+              <svg class="iconi" aria-hidden="true">
+                <use xlink:href="#icon-ALGORITHM"></use>
+              </svg>
             </p>
-        </div>
-        <nav class="level is-mobile is-higher">
-          <div class="level-left">
-            <a class="level-item">                       
-              <span class="icon is-small"><i class="fas fa-reply"></i></span>
-            </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-            </a>
-            <a class="level-item">
-              <span class="icon is-small"><i class="fas fa-heart"></i></span>
-            </a>
+          </figure>
+          <my-icon/>
+          <div class="media-content">
+            <div class="content" > 
+                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-10px;">
+                Learning From Machines</a> 
+                <svg class="icon is-small" aria-hidden="true">
+                  <use xlink:href="#icon-calender"></use>
+                </svg>
+                <small style="margin-top: -80px">11/14/2020</small>
+                <!-- <div clas="columns is-mobile is-multiline'">
+                 <div class="column" > -->
+
+                    <p class="is-subtitle is-multiline is-clipped">
+                      Perspectives on AI and technological accelerators
+                    </p>
+                 <!-- </div>
+                </div> -->
+            </div>
+            <nav class="level is-mobile is-higher">
+              <div class="level-left">
+                <a class="level-item">                       
+                  <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                </a>
+                <a class="level-item">
+                  <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                </a>
+                <a class="level-item">
+                  <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                </a>
+              </div>
+            </nav>
           </div>
-        </nav>
+          <span v-if="hover">
+            <div class="back is-background-container">
+        
+            <div class="media-right is-higher">
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=http://localhost:54083/writing/canwelearnfromai" target="_blank">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-14"></use>
+                </svg>
+              </a>
+            </div>
+            </div>
+        </span>
+        </article>
       </div>
-      <span v-if="hover">
-        <div class="back is-background-container">
-    
-        <div class="media-right is-higher">
-          <a class="twitter-share-button" href="https://twitter.com/intent/tweet?url=http://localhost:54083/writing/canwelearnfromai">
-            <svg class="icon" aria-hidden="true">
-               <use xlink:href="#icon-14"></use>
-            </svg>
-          </a>
-        </div>
-        </div>
-    </span>
-    </article>
-  </div>
+    </div>
+</div>
 </template>
 <script>
 import { Icon } from 'ant-design-vue'
 const MyIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2197972_2s0bhj6h68g.js', 
+  scriptUrl: '//at.alicdn.com/t/font_2197972_is1hveuufj7.js', 
 })
 
 export default {
@@ -93,15 +102,16 @@ export default {
   .text {
     transition: background-size .4s ease;
     background: linear-gradient(to bottom, transparent 62%, #d37766 0) center center/0% 75% no-repeat;
-    font-family: 'Montserrat', sans-serif; 
+    // font-family: 'Montserrat', sans-serif; 
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 1.33rem;
     font-weight: 00px;
     color: #35495e;
     cursor: pointer;
       
       letter-spacing: -.1rem;
-      font-family:  'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      // font-family:  'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+      // 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       margin-right: 10px;
     &:hover {
       background-size: 100% 100%;
@@ -131,7 +141,7 @@ export default {
     border-radius: 15px;
     padding: 20px;
     width: auto;
-    height: 80px;
+    height: auto;
     border: 2px solid #adbef5;
     margin-top: 20px;
 }

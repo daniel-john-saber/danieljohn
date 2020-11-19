@@ -3,47 +3,99 @@
     <section class="hero" >
       <div class="hero-head">
         <div class="container has-shadow">
-          <nav class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
-            <div class="container" style="margin-bottom: 10px">
-              <div class="navbar-brand">
-              
-                <img
-                    src="~assets/logo.png"
-                    alt="peak"
-                    width="120"
-                    height="10"
-                    class="is-pad-left"
-                >
-              
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" href="/">
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                </a>
+         <!-- mobile nav -->
+          
+          <nav v-if="!isMobile()" class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
+            <div class="container" style="width: auto;">
+              <!-- <div class="column is-2" style="margin-bottom: 10px"> -->
+                <div class="navbar-brand">
+                    <img
+                        src="~assets/logo-mobile.png"
+                        alt="peak"
+                        width="110"
+                        class="is-pad-left"
+                        
+                    >
+                  <a role="button" class="navbar-burger" aria-label="menu" data-target="navMenu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                <!-- </div> -->
+              </div>
+              <div class="level navbar-menu" id="navMenu">
+                <div class="navbar-end" style="margin-top: 3px">
+                  <div class="columns is-mobile">
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/">Home</a>
+                    </div>
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/writing/canwelearnfromai">Writing</a>
+                    </div>
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/projects">Projects</a>
+                    </div>
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/about">About</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="navbar-menu">
-              <div class="navbar-end" style="margin-top: 3px">
-                <a class="navbar-item is-tab is-nav-text" href="/">Home</a>
-                <a class="navbar-item is-tab is-nav-text" href="/writing/canwelearnfromai">Writing</a>
-                <a class="navbar-item is-tab is-nav-text" @click="isActive = !isActive" :disabled="isActive">Projects</a>
-                <a class="navbar-item is-tab is-nav-text" href="/about">About</a>
+          </nav>
+          <!-- Desktop nav -->
+          <nav v-if="isMobile()" class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
+            <div class="container" style="width: auto;">
+              <!-- <div class="column is-2" style="margin-bottom: 10px"> -->
+                <div class="navbar-brand">
+                    <img
+                        src="~assets/logo-mobile.png"
+                        alt="peak"
+                        width="110"
+                        class="is-pad-left"
+                        
+                    >
+                  <a role="button" class="navbar-burger" aria-label="menu" data-target="navMenu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                <!-- </div> -->
+              </div>
+              <div class="level navbar-menu" id="navMenu">
+                <div class="navbar-end" style="margin-top: 3px">
+                  <div class="columns is-mobile">
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/">Home</a>
+                    </div>
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/writing/canwelearnfromai">Writing</a>
+                    </div>
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/projects">Projects</a>
+                       <!-- @click="isActive = !isActive" :disabled="isActive" -->
+                    </div>
+                    <div class="column">
+                      <a class="navbar-item is-tab is-nav-text" href="/about">About</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </nav>
         </div>
       </div>
     </section>
-    <section v-if="isActive"> 
+    <!-- <section v-if="isActive"> 
       <div class="columns">
         <div class="column is-6" style="margin-left: 900px;">
 
           <message v-model="isActive" aria-close-label="Close message" style="margin-left: -250px; margin-right: auto;">
-              <a class="texti" href="/secret">coming soon</a> 
+              <a class="texti" href="/projects/secret">coming soon</a> 
           </message>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="main-content columns">
       <div class="container column is-10" >
@@ -53,11 +105,52 @@
   </div>
 </template>
 <script>
+if (process.browser) {
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+  });
+}
+
+// import mobile from "~/mixins/mobile.js";
 export default {
+  // mixins: [mobile],
   data() {
       return {
           isActive: false
       }
+  },
+  methods: {
+    isMobile() {
+      if (process.browser) {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
   },
   computed: { 
 
