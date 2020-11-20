@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="columns">
-      <div class="column">
-        <div class="carotainer is-interest-container cont-float">
+    <div class="columns is-mobile">
+      <div class="column is-mobile">
+        <div class="carotainer is-interest-container cont-float is-mobile">
           <figure class="image is-160x160" style="z-index:1;">
             <img src="~/assets/interests/pluto.png">
           </figure>
@@ -66,14 +66,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
-a{
-
-}
+<style scoped lang="scss">
 .is-text-interest-position {
   position: absolute;
   top: 40%;
-  right: -25%;
+  // right: -25%;
   text-align: right; 
   // float: right;
 
@@ -138,11 +135,13 @@ a{
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
-  margin-right: 50px;
+  margin-bottom: 3em;
+  // margin-right: 50px;
 }
 
 .carotainer:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 0px;
+    // margin-top: 10px;
 }
 
 .carotainer:hover {

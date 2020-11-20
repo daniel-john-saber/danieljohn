@@ -1,10 +1,12 @@
 <template>
   <div>
-    <div class="columns"  style="margin-top: 70px;">
-      <div class="column is-6"  style="margin-left: 0; margin-right: auto;">
+    <div class="columns is-mobile"  style="margin-top: 70px;">
+      <div class="column is-6 is-mobile"  style="margin-left: 0; margin-right: auto;">
         <div class="container">
           <div class="content">
-            <a class="text_secret twitter-share-button is-white-text" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
+            <a v-if="$device.isDesktop" class="text_secret twitter-share-button is-white-text" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
+            <a v-else class="text_secret-mobile twitter-share-button is-white-text" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
+
             <div>
               <i></i><i></i>
             </div>
@@ -169,7 +171,38 @@ div:hover > i {
   transition: background-size .4s ease;
   background: linear-gradient(to bottom, transparent 62%, #d37766 0) center left/00% 30% no-repeat;
   font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 135px; 
+  font-size: 8em; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center; 
+  width: 200px;
+  height: 47px;
+  color: #28292b;
+  cursor: pointer;
+    letter-spacing: .1rem;
+    margin-right: 10px;
+  &:hover {
+    background-size: 100% 100%;
+    color: rgba(70, 118, 250, 0.7);
+  }
+  &:active {
+    background-size: 80% 100%;
+  }
+  &-container {
+    z-index: 1;
+    color: rgba(110, 151, 255, 0.7);
+    position: relative;
+    background-color: #fff;
+    padding: 60px;
+    box-shadow: 0 0 90px 10px rgba(255, 255, 255, 0.15);
+  }
+}
+.text_secret-mobile {
+  transition: background-size .4s ease;
+  background: linear-gradient(to bottom, transparent 62%, #d37766 0) center left/00% 30% no-repeat;
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 4em; 
   font-weight: bold; 
   letter-spacing: -1px; 
   line-height: 1; 

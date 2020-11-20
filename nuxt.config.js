@@ -45,6 +45,9 @@ export default {
   /*
   ** Nuxt.js modules
   */
+  buildModules: [
+    '@nuxtjs/google-analytics'
+  ],
   modules: [
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
@@ -70,7 +73,10 @@ export default {
     ]
   ],
   gtm: {
-    id: 'GTM-MTPD369'
+    id: 'G-QKG0B0RH4K'
+  },
+  googleAnalytics: {
+    id: 'G-QKG0B0RH4K'
   },
   /*
   ** Axios module configuration

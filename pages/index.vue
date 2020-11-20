@@ -7,16 +7,12 @@
             <div class="column is-one-half is-centered has-nice-link">
               <div itemscope itemtype="http://schema.org/Person">
                 <img id="profile-pic" src="~/assets/me.png" width="250" height="160" itemprop="image">
-                <h1 class="title title--kukuri" itemprop="name">Daniel John</h1>
-                
-                <div v-if="$device.isMobile">
-                   <no-ssr v-if="$device.isMobile">
-                    <div v-if="$device.isMobile" class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>
-                   </no-ssr>
-                </div>
-                <div v-else>
-                   <div><span id='text'></span><div></div></div>
-
+                <h1 v-if="!$device.isMobile" class="title title--kukuri" itemprop="name">Daniel John</h1>
+                <h1 v-else class="title" style="margin-bottom: 0em;" itemprop="name">Daniel John</h1>
+                <div>
+                  <no-ssr>
+                    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>
+                  </no-ssr>
                 </div>
               </div>
               <br>
@@ -189,7 +185,7 @@ export default {
     font-size: 67px;
     color: #35495e;
     letter-spacing: 1px;
-    padding-bottom: 03px;
+    padding-bottom: 3px;
     padding-top: 20px;
     margin-bottom: 500px;
 
@@ -203,10 +199,10 @@ export default {
     font-size: 42px;
     color: #526488;
     word-spacing: 5px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
   }
 
-  .title--kukuri, .title--kukuri-mobile {
+  .title--kukuri {
     text-transform: uppercase;
     font-weight: 800;
     overflow: hidden;
@@ -225,7 +221,7 @@ export default {
     width: 7.47em;
     top: 50.5%;
     margin-top: 95.5px;
-    margin-left: auto;
+    /* margin-left: auto; */
     background: #f6907e;
     transform: translate3d(-100%,0,0);
     transition: transform 0.4s;
@@ -239,8 +235,9 @@ export default {
     height: 21px;
     width: 495px;
     top: 50.5%;
-    margin-top: 95.5px;
+    /* margin-top: 95.5px; */
     margin-left: 0px;
+    /* margin-right: 80px; */
     background: #f6907e;
     transform: translate3d(-100%,0,0);
     transition: transform 0.4s;
@@ -265,7 +262,7 @@ export default {
   }
 
   .title--kukuri:hover::before {
-    width: 100%;
+    /* width: 100%; */
   }
   .is-alt-section { 
     background-color:none 
@@ -284,9 +281,9 @@ export default {
 .hidden {
   opacity:0;
 }
-.console-container {
+/* .console-container {
  
-  /* font-family:Khula;
+  font-family:Khula;
   font-size:4em;
   text-align:center;
   height:200px;
@@ -297,13 +294,13 @@ export default {
   top:0;
   bottom:0;
   left:0;
-  right:0; */
+  right:0;
 }
 .console-underscore {
-  /* display:'float';
-  top:-0.14em; */
-  /* left:-100px; */
-}
+  display:'float';
+  top:-0.14em;
+  left:-100px;
+} */
 .line{
   margin: 0 auto;
   width: 73%;

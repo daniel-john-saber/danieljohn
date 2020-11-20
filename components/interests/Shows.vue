@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="columns">
-      <div class="column">
-        <div class="carotainer is-interest-container cont-float">
+    <div class="columns is-mobile">
+      <div class="column is-mobile">
+        <div class="carotainer is-interest-container cont-float is-mobile">
           <figure class="image is-160x160" style="z-index:1;">
             <img src="~/assets/interests/onepiece.png">
           </figure>
@@ -74,7 +74,7 @@ export default {
 .is-text-interest-position {
   position: absolute;
   top: 40%;
-  right: -25%;
+  // right: -25%;
   text-align: right; 
   // float: right;
 
@@ -135,15 +135,15 @@ export default {
   display: flex;
   height: auto;
   width: 200px;
-  // margin-left: -100px;
+  margin-left: -0em;
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
-  margin-right: 50px;
+  margin-bottom: 3em;
 }
 
 .carotainer:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 0em;
 }
 
 .carotainer:hover {

@@ -27,7 +27,7 @@
                 </div>
               </div>
           </div>
-          <div class="column is-5" style="margin-left: 40px;">
+          <div class="column is-5">
               <div class="card is-project-card">
                 <div class="card-image">
                     <figure class="image  is-4by3">

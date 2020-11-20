@@ -5,9 +5,8 @@
         <div class="container has-shadow">
          <!-- mobile nav -->
           
-          <nav v-if="!isMobile()" class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
+          <nav class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
             <div class="container" style="width: auto;">
-              <!-- <div class="column is-2" style="margin-bottom: 10px"> -->
                 <div class="navbar-brand">
                     <img
                         src="~assets/logo-mobile.png"
@@ -16,11 +15,11 @@
                         class="is-pad-left"
                         
                     >
-                  <a role="button" class="navbar-burger is-right" aria-label="menu" data-target="navMenu" aria-expanded="false">
+                  <div class="navbar-burger burger" aria-label="menu" data-target="navMenu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                  </a>
+                  </div>
                 <!-- </div> -->
               </div>
               <div class="level navbar-menu" id="navMenu">
@@ -44,9 +43,8 @@
             </div>
           </nav>
           <!-- Desktop nav -->
-          <nav v-if="isMobile()" class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
+          <!-- <nav class="navbar   cl-effect-6" role="navigation" aria-label="main navigation">
             <div class="container" style="width: auto;">
-              <!-- <div class="column is-2" style="margin-bottom: 10px"> -->
                 <div class="navbar-brand">
                     <img
                         src="~assets/logo-mobile.png"
@@ -60,7 +58,6 @@
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                   </a>
-                <!-- </div> -->
               </div>
               <div class="level navbar-menu" id="navMenu">
                 <div class="navbar-end" style="margin-top: 3px">
@@ -73,7 +70,6 @@
                     </div>
                     <div class="column">
                       <a class="navbar-item is-tab is-nav-text" href="/projects">Projects</a>
-                       <!-- @click="isActive = !isActive" :disabled="isActive" -->
                     </div>
                     <div class="column">
                       <a class="navbar-item is-tab is-nav-text" href="/about">About</a>
@@ -82,7 +78,7 @@
                 </div>
               </div>
             </div>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </section>

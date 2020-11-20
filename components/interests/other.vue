@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="columns">
-      <div class="column">
+    <div class="columns is-mobile">
+      <div class="column is-mobile">
         <div class="carotainer is-interest-container cont-float">
           <figure class="image is-160x160" style="z-index:1;">
             <img src="~/assets/interests/michigan.png">
@@ -110,11 +110,12 @@ export default {
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;
-  margin-right: 50px;
+  margin-bottom: 3em;
+
 }
 
 .carotainer:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .carotainer:hover {

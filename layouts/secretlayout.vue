@@ -16,11 +16,11 @@
                     height="10"
                     class="is-pad-left"
                 >
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" href="/">
+                  <div class="navbar-burger burger" aria-label="menu" aria-expanded="false" href="/">
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
                   <span aria-hidden="true"></span>
-                </a>
+                </div>
               </div>
             </div>
             <div class="navbar-menu">

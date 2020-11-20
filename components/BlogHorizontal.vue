@@ -13,8 +13,8 @@
           </figure>
           <my-icon/>
           <div class="media-content">
-            <div class="content" > 
-                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-10px;">
+            <div class="content is-left" > 
+                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%; margin-right:-55%;">
                 Learning From Machines</a> 
                 <svg class="icon is-small" aria-hidden="true">
                   <use xlink:href="#icon-calender"></use>
@@ -158,7 +158,7 @@ export default {
  vertical-align: 60px;
  fill: currentColor;
  overflow: hidden;
- margin-top: -5px;
+ margin-top: -0px;
  margin-left: 6px
  }
  .is-font { 
