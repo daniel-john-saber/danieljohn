@@ -4,8 +4,8 @@
       <div class="column is-6 is-mobile"  style="margin-left: 0; margin-right: auto;">
         <div class="container">
           <div class="content">
-            <a v-if="$device.isDesktop" class="text_secret twitter-share-button is-white-text" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
-            <a v-else class="text_secret-mobile twitter-share-button is-white-text" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
+            <a v-if="!$device.isMobile" class="text_secret" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
+            <a v-else class="text_secret-mobile twitter-share-button" href="https://twitter.com/intent/tweet?text=@danieljohn__%20what%20is%20cashboard?">i'm building something</a> 
 
             <div>
               <i></i><i></i>
@@ -171,7 +171,7 @@ div:hover > i {
   transition: background-size .4s ease;
   background: linear-gradient(to bottom, transparent 62%, #d37766 0) center left/00% 30% no-repeat;
   font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 8em; 
+  font-size: 4em; 
   font-weight: bold; 
   letter-spacing: -1px; 
   line-height: 1; 

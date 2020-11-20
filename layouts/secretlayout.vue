@@ -10,7 +10,7 @@
               <div class="navbar-brand">
               
                 <img
-                    src="~assets/logo.png"
+                    src="~assets/logo-mobile.png"
                     alt="peak"
                     width="120"
                     height="10"
@@ -73,13 +73,13 @@ export default {
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 1600.00,
-      minWidth: 400.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
+      minHeight: 2000.00,
+      minWidth: 800.00,
+      scale:1,
+      scaleMobile: 0.30,
       color: 0xffe100,
       color2: 0x1fc0c0,
-      size: 0.70,
+      size: 0.7,
       backgroundColor: 0x9d9dc5
     })
     }
