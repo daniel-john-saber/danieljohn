@@ -38,6 +38,10 @@ export default {
   */
   plugins: [
     { src: '~/plugins/icons.js', mode: 'client' }, // only on client side
+    {
+      src: './plugins/GoogleAnalytics.js',
+      mode: 'client'
+    }
   ],
   /*
   ** Nuxt.js dev-modules

@@ -8,7 +8,7 @@
               <div  class="hero-body">
                 <vanta/>
 
-                <div class="container" style="margin-top:80px">
+                <div class="container" style="margin-top:12%">
                   <h1 class="title is-1 ">
                     Learning From Machines
                   </h1>
