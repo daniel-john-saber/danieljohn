@@ -73,7 +73,7 @@ export default {
     ]
   ],
   gtm: {
-    id: 'G-QKG0B0RH4K'
+    id: 'GTM-MTPD369'
   },
   googleAnalytics: {
     id: 'G-QKG0B0RH4K'
