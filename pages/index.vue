@@ -8,7 +8,7 @@
               <div itemscope itemtype="http://schema.org/Person">
                 <img id="profile-pic" src="~/assets/me.png" width="250" height="160" itemprop="image">
                 <h1 v-if="!$device.isMobile" class="title title--kukuri" itemprop="name">Daniel John</h1>
-                <h1 v-else class="title" style="margin-bottom: 0em;" itemprop="name">Daniel John</h1>
+                <h1 v-else class="title" style="margin-bottom: 0em; font-weight: 300;" itemprop="name">Daniel John</h1>
                 <div>
                   <no-ssr>
                     <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'></div></div>

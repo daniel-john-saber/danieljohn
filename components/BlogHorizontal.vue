@@ -23,7 +23,7 @@
                 <!-- <div clas="columns is-mobile is-multiline'">
                  <div class="column" > -->
 
-                    <p class="is-subtitle is-multiline is-clipped">
+                    <p class="is-subtitle is-multiline">
                       Perspectives on AI and technological accelerators
                     </p>
                  <!-- </div>
@@ -131,6 +131,8 @@ export default {
   }
   .is-subtitle {
     margin-top: -2px;
+    white-space: wrap;
+    text-overflow: wrap;
   }
   body {
     background: rgb(121, 175, 211);
@@ -144,6 +146,7 @@ export default {
     height: auto;
     border: 2px solid #adbef5;
     margin-top: 20px;
+    text-overflow: wrap;
 }
 
 .icony {
