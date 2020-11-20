@@ -16,10 +16,13 @@
             <div class="content is-left" > 
                 <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%; margin-right:-55%;">
                 Learning From Machines</a> 
-                <svg class="icon is-small" aria-hidden="true">
-                  <use xlink:href="#icon-calender"></use>
-                </svg>
-                <small style="margin-top: -80px">11/14/2020</small>
+                <span class="container">
+                  <svg class="icon is-small" aria-hidden="true">
+                    <use xlink:href="#icon-calender"></use>
+                  </svg>
+                  <small style="margin-top: -80px">11/14/2020</small>
+                </span>
+                
                 <!-- <div clas="columns is-mobile is-multiline'">
                  <div class="column" > -->
 
