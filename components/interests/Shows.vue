@@ -135,7 +135,7 @@ export default {
   display: flex;
   height: auto;
   width: 200px;
-  margin-left: -0em;
+  // margin-left: -0em;
   transition: 0.4s ease-out;
   position: relative;
   left: 0px;

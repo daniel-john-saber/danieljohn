@@ -16,7 +16,7 @@
             <div class="content is-left" > 
                 <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%; margin-right:-55%;">
                 Learning From Machines</a> 
-                <span class="container">
+                <span class="container" >
                   <svg class="icon is-small" aria-hidden="true">
                     <use xlink:href="#icon-calender"></use>
                   </svg>
@@ -26,9 +26,9 @@
                 <!-- <div clas="columns is-mobile is-multiline'">
                  <div class="column" > -->
 
-                    <p class="is-subtitle is-multiline">
-                      Perspectives on AI and technological accelerators
-                    </p>
+                <p class="is-subtitle is-multiline">
+                  Perspectives on AI and technological accelerators
+                </p>
                  <!-- </div>
                 </div> -->
             </div>
