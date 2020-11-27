@@ -7,6 +7,8 @@
             <div class="column is-one-half is-centered has-nice-link">
               <div itemscope itemtype="http://schema.org/Person">
                 <img id="profile-pic" src="~/assets/me.png" width="250" height="160" itemprop="image">
+                {{getWidth()}}
+                <!-- <div v-if="getWidth() > 1300"> -->
                 <h1 v-if="!$device.isMobile" class="title title--kukuri" itemprop="name">Daniel John</h1>
                 <h1 v-else class="title" style="margin-bottom: 0em; font-weight: 300;" itemprop="name">Daniel John</h1>
                 <div>
@@ -122,6 +124,7 @@ import Music from '~/components/interests/Music'
 import Shows from '~/components/interests/Shows'
 import Books from '~/components/interests/Books'
 import Interests from '~/components/interests/other'
+import NuxtSSRScreenSize from 'nuxt-ssr-screen-size'
 
 import { Icon } from 'ant-design-vue'
 const MyIcon = Icon.createFromIconfontCN({
@@ -145,16 +148,11 @@ export default {
       { src: 'vanta/vanta.clouds.min.js' },
     ]
   },
+  mixins: [NuxtSSRScreenSize.NuxtSSRScreenSizeMixin],
   methods: {
-    // isMobile() {
-    //   if (process.browser) {
-    //     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //       return true
-    //     } else {
-    //       return false
-    //     }
-    //   }
-    // }
+    getWidth () {
+      return this.$vssWidth
+    }
   },
   async mounted() {
     // window is only avaiable on browser

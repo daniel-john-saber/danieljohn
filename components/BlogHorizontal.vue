@@ -1,5 +1,5 @@
 <template>
-<div clas="columns is-mobile is-multiline'">
+<div clas="columns'">
     <div class="column" style="overflow: auto;">
       <div @mouseover="hover = true" @mouseleave="hover = false" class="container write-block is-small">
         
@@ -14,14 +14,9 @@
           <my-icon/>
           <div class="media-content">
             <div class="content is-left" > 
-                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%; margin-right:-55%;">
+                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%; margin-left:-20%;">
                 Learning From Machines</a> 
-                <span class="container" style="padding-left: 4em;">
-                  <svg class="icon is-small" aria-hidden="true">
-                    <use xlink:href="#icon-calender"></use>
-                  </svg>
-                  <small style="margin-top: -80px">11/14/2020</small>
-                </span>
+                
                 
                 <!-- <div clas="columns is-mobile is-multiline'">
                  <div class="column" > -->
@@ -31,6 +26,14 @@
                 </p>
                  <!-- </div>
                 </div> -->
+            </div>
+            <div class="content is-right" style="margin-left: -40em;"> 
+              <div class="container" >
+                  <svg class="icon is-small" aria-hidden="true">
+                    <use xlink:href="#icon-calender"></use>
+                  </svg>
+                  <small style="margin-top: -80px">11/14/2020</small>
+                </div>
             </div>
             <nav class="level is-mobile is-higher">
               <div class="level-left">

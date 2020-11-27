@@ -95,6 +95,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 .is-secret-title { 
   color: rgb(17, 17, 17);
   font-size: 80px;
