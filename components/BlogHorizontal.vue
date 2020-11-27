@@ -14,7 +14,7 @@
           <my-icon/>
           <div class="media-content">
             <div class="content is-left" > 
-                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%; margin-left:-20%;">
+                <a class="text is-font mr-5" href="/writing/canwelearnfromai" style="margin-bottom:-55%;">
                 Learning From Machines</a> 
                 
                 
