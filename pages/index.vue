@@ -7,8 +7,6 @@
             <div class="column is-one-half is-centered has-nice-link">
               <div itemscope itemtype="http://schema.org/Person">
                 <img id="profile-pic" src="~/assets/me.png" width="250" height="160" itemprop="image">
-                {{getWidth()}}
-                <!-- <div v-if="getWidth() > 1300"> -->
                 <h1 v-if="!$device.isMobile" class="title title--kukuri" itemprop="name">Daniel John</h1>
                 <h1 v-else class="title" style="margin-bottom: 0em; font-weight: 300;" itemprop="name">Daniel John</h1>
                 <div>
@@ -44,9 +42,6 @@
         </div>
       </div>
     </section>
-    <!-- <div class="container">
-          <div class="line"></div>
-    </div> -->
     <section>
       <div>
         <div class="columns is-vcentered is-mobile">
